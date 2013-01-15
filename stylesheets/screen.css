@@ -1,7 +1,3 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 /* line 17, ../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -65,4 +61,209 @@ a img {
 /* line 116, ../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
+}
+
+/* line 7, ../sass/screen.scss */
+body {
+  background-image: url("../trabalhos/Menu/b.jpg");
+}
+
+/* line 10, ../sass/screen.scss */
+header {
+  text-align: right;
+  background: gray;
+}
+/* line 13, ../sass/screen.scss */
+header h1 {
+  font-family: "Wire One", sans-serif;
+  font-size: 64px;
+  background-image: url("../trabalhos/Menu/b.jpg");
+  padding-top: 3em;
+  padding-right: 20px;
+}
+/* line 20, ../sass/screen.scss */
+header h2 {
+  -webkit-box-shadow: inset 2px 2px 5px -2px #888888;
+  -moz-box-shadow: inset 2px 2px 5px -2px #888888;
+  box-shadow: inset 2px 2px 5px -2px #888888;
+  font-family: "Rokkitt", serif;
+  font-size: 1.5em;
+  background-image: url("../trabalhos/Menu/a.jpg");
+  padding-right: 20px;
+}
+/* line 27, ../sass/screen.scss */
+header nav {
+  position: absolute;
+  top: 10px;
+  right: 50px;
+}
+/* line 32, ../sass/screen.scss */
+header li {
+  display: block;
+  float: left;
+  height: 25px;
+  text-align: center;
+  width: 125px;
+  color: #555;
+}
+/* line 39, ../sass/screen.scss */
+header li:first-child {
+  border-right: 1px solid #bbbbbb;
+}
+/* line 42, ../sass/screen.scss */
+header li:last-child {
+  border-left: 1px solid #bbbbbb;
+}
+
+/* line 47, ../sass/screen.scss */
+#trabalhos {
+  background-image: url("../trabalhos/Menu/a.jpg");
+  display: block;
+  height: 300px;
+  overflow: hidden;
+}
+/* line 52, ../sass/screen.scss */
+#trabalhos li {
+  float: left;
+  display: block;
+  width: 225px;
+  height: 225px;
+  margin: 20px 7px;
+  padding: 10px;
+  overflow: hidden;
+  border: 1px solid #bbbbbb;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transition: background-color 0.5s ease-out;
+  -moz-transition: background-color 0.5s ease-out;
+  -o-transition: background-color 0.5s ease-out;
+  transition: background-color 0.5s ease-out;
+  -webkit-box-shadow: 0 2px 5px -2px #888888;
+  -moz-box-shadow: 0 2px 5px -2px #888888;
+  box-shadow: 0 2px 5px -2px #888888;
+}
+/* line 59, ../sass/screen.scss */
+#trabalhos li a {
+  display: block;
+  height: 225px;
+  padding-top: 300px;
+  color: white;
+  text-decoration: none;
+  font-family: "Wire One", sans-serif;
+  font-size: 30px;
+  background: url("../trabalhos/Menu/a.png") repeat-x scroll 0 250px;
+  -webkit-transition-property: padding, background-position;
+  -moz-transition-property: padding, background-position;
+  -o-transition-property: padding, background-position;
+  transition-property: padding, background-position;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  -moz-transition-timing-function: ease-out;
+  -o-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+  -webkit-transition: padding 0.5s ease-out;
+  -moz-transition: padding 0.5s ease-out;
+  -o-transition: padding 0.5s ease-out;
+  transition: padding 0.5s ease-out;
+}
+/* line 71, ../sass/screen.scss */
+#trabalhos li a:hover {
+  padding-top: 150px;
+  -webkit-transition-property: padding, background-position;
+  -moz-transition-property: padding, background-position;
+  -o-transition-property: padding, background-position;
+  transition-property: padding, background-position;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  -moz-transition-timing-function: ease-out;
+  -o-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+  background: url("../trabalhos/Menu/a.png") repeat-x scroll 0 130px;
+}
+/* line 79, ../sass/screen.scss */
+#trabalhos li a span {
+  font-family: "Rokkitt", serif;
+  display: block;
+  clear: left;
+  color: red;
+  font-size: 15px;
+}
+/* line 95, ../sass/screen.scss */
+#trabalhos li:hover {
+  -webkit-transition-property: background-color;
+  -moz-transition-property: background-color;
+  -o-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  -moz-transition-timing-function: ease-out;
+  -o-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+  background-color: #ccc;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+  opacity: 0.9;
+}
+
+/*author.jpg = id do item da lista*/
+/* line 107, ../sass/screen.scss */
+#bia {
+  background: url("../trabalhos/Menu/bia.jpg");
+}
+
+/* line 107, ../sass/screen.scss */
+#isa {
+  background: url("../trabalhos/Menu/isa.jpg");
+}
+
+/* line 107, ../sass/screen.scss */
+#jean {
+  background: url("../trabalhos/Menu/jean.jpg");
+}
+
+/* line 107, ../sass/screen.scss */
+#lu {
+  background: url("../trabalhos/Menu/lu.jpg");
+}
+
+/* line 107, ../sass/screen.scss */
+#lud {
+  background: url("../trabalhos/Menu/lud.jpg");
+}
+
+/* line 107, ../sass/screen.scss */
+#myho {
+  background: url("../trabalhos/Menu/myho.jpg");
+}
+
+/* line 107, ../sass/screen.scss */
+#nat {
+  background: url("../trabalhos/Menu/nat.jpg");
+}
+
+/* line 107, ../sass/screen.scss */
+#samuca {
+  background: url("../trabalhos/Menu/samuca.jpg");
+}
+
+/* line 112, ../sass/screen.scss */
+footer {
+  background: gray;
+  display: block;
+  -webkit-box-shadow: 0px -2px 5px -2px #888888;
+  -moz-box-shadow: 0px -2px 5px -2px #888888;
+  box-shadow: 0px -2px 5px -2px #888888;
+  padding-top: 20px;
+  padding-right: 20px;
+  text-align: right;
+  background-image: url("../trabalhos/Menu/b.jpg");
 }

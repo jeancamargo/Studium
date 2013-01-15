@@ -1,6 +1,120 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-
 @import "compass/reset";
+@import "compass/css3";
+
+//Variáveis
+
+@import "partials/_base";
+body{
+	background-image: url("../trabalhos/Menu/b.jpg");
+}
+header{
+	text-align:right;
+	background:gray;
+	h1{
+		font-family: 'Wire One', sans-serif;
+		font-size: 64px;
+		background-image: url("../trabalhos/Menu/b.jpg");
+		padding-top: 3em;
+		padding-right:20px;
+	}
+	h2{
+		@include single-box-shadow(#888, 2px, 2px, 5px, -2px, true);
+		font-family: 'Rokkitt', serif;
+		font-size: 1.5em;
+		background-image: url("../trabalhos/Menu/a.jpg");
+		padding-right:20px;
+	}
+	nav{
+		position: absolute;
+		top: 10px;
+		right: 50px;
+	}
+	li{
+		display:block;
+		float:left;
+		height:25px;
+		text-align:center;
+		width:125px;
+		color: #555;
+		&:first-child{
+			border-right:$menu-revista-border;
+		}
+		&:last-child{
+			border-left:$menu-revista-border;
+		}
+	}
+}
+#trabalhos{
+	background-image: url("../trabalhos/Menu/a.jpg");
+	display: block;
+	height: 300px;
+	overflow: hidden;
+	li{
+		float:left;
+		display:block;
+		width:225px;
+		height:225px;
+		margin: 20px 7px;
+		padding: 10px;
+		a{
+			display:block;
+			height:225px;
+			padding-top:300px;
+			color: white;
+			text-decoration: none;
+			font-family: 'Wire One', sans-serif;
+			font-size: 30px;
+			background: url("../trabalhos/Menu/a.png") repeat-x scroll 0 250px;
+			@include transition-property(padding, background-position);
+			@include transition-duration(0.5s);
+			@include transition-timing-function(ease-out);
+			&:hover{
+				padding-top:150px;
+				@include transition-property(padding, background-position);
+				@include transition-duration(0.5s);
+				@include transition-timing-function(ease-out);
+				background: url("../trabalhos/Menu/a.png") repeat-x scroll 0 130px;
+			}
+			@include single-transition(padding, 0.5s, ease-out);
+			span{
+				font-family: 'Rokkitt', serif;
+				display:block;
+				clear:left;
+				color:red;
+				font-size: 15px;
+			}
+		}
+		overflow:hidden;
+		border: 1px solid #BBBBBB;
+		background: {
+			color: white;
+			repeat: no-repeat;
+			position: center;
+		}
+		@include single-transition(background-color, 0.5s, ease-out);
+		&:hover{
+			@include transition-property(background-color);
+			@include transition-duration(0.5s);
+			@include transition-timing-function(ease-out);
+			background-color: #ccc;
+			@include opacity(0.9);
+		}
+		@include single-box-shadow(#888, 0, 2px, 5px, -2px, false);
+	}
+}
+/*author.jpg = id do item da lista*/
+@each $author in $lista{
+    ##{$author}{
+	background: url("../trabalhos/Menu/#{$author}.jpg");
+	}
+}
+
+footer{
+	background:gray;
+	display: block;
+	@include single-box-shadow(#888, 0px, -2px, 5px, -2px, false);
+	padding-top: 20px;
+	padding-right: 20px;
+	text-align: right;
+	background-image: url("../trabalhos/Menu/b.jpg");
+}
