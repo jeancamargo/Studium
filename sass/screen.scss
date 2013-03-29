@@ -19,7 +19,7 @@ header{
 	}
 	h2{
 		@include single-box-shadow(#888, 2px, 2px, 5px, -2px, true);
-		font-family: 'Rokkitt', serif;
+		font-family: Verdana, serif;
 		font-size: 1.5em;
 		background-image: url("../trabalhos/Menu/a.jpg");
 		padding-right:20px;
