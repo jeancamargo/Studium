@@ -1,120 +1,124 @@
 @import "compass/reset";
 @import "compass/css3";
 
-//Variáveis
-
 @import "partials/_base";
 body{
-	background-image: url("../trabalhos/Menu/b.jpg");
+	font-family: 'Dosis', sans-serif;
 }
 header{
-	text-align:right;
-	background:gray;
+	height: 270px;
+	
+	//childs
 	h1{
-		font-family: 'Wire One', sans-serif;
-		font-size: 64px;
-		background-image: url("../trabalhos/Menu/b.jpg");
-		padding-top: 3em;
-		padding-right:20px;
-	}
-	h2{
-		@include single-box-shadow(#888, 2px, 2px, 5px, -2px, true);
-		font-family: Verdana, serif;
-		font-size: 1.5em;
-		background-image: url("../trabalhos/Menu/a.jpg");
-		padding-right:20px;
+		background-color:#fff;
+		border-bottom: 1px solid #BBBBBB;
+		padding: 5px 20px;
 	}
 	nav{
 		position: absolute;
-		top: 10px;
-		right: 50px;
-	}
-	li{
-		display:block;
-		float:left;
-		height:25px;
-		text-align:center;
-		width:125px;
-		color: #555;
-		&:first-child{
-			border-right:$menu-revista-border;
-		}
-		&:last-child{
-			border-left:$menu-revista-border;
+		right: 20px;
+		top:5px;
+		li{
+			display: inline-block;
+			&:after
+				{
+				content: " /";
+				}
+			&:last-child:after
+				{
+				content: "";
+				}
 		}
 	}
-}
-#trabalhos{
-	background-image: url("../trabalhos/Menu/a.jpg");
-	display: block;
-	height: 300px;
-	overflow: hidden;
-	li{
-		float:left;
-		display:block;
-		width:225px;
-		height:225px;
-		margin: 20px 7px;
-		padding: 10px;
-		a{
-			display:block;
-			height:225px;
-			padding-top:300px;
-			color: white;
-			text-decoration: none;
-			font-family: 'Wire One', sans-serif;
-			font-size: 30px;
-			background: url("../trabalhos/Menu/a.png") repeat-x scroll 0 250px;
-			@include transition-property(padding, background-position);
-			@include transition-duration(0.5s);
-			@include transition-timing-function(ease-out);
-			&:hover{
-				padding-top:150px;
-				@include transition-property(padding, background-position);
-				@include transition-duration(0.5s);
-				@include transition-timing-function(ease-out);
-				background: url("../trabalhos/Menu/a.png") repeat-x scroll 0 130px;
-			}
-			@include single-transition(padding, 0.5s, ease-out);
-			span{
-				font-family: 'Rokkitt', serif;
-				display:block;
-				clear:left;
-				color:red;
-				font-size: 15px;
-			}
-		}
-		overflow:hidden;
-		border: 1px solid #BBBBBB;
-		background: {
-			color: white;
-			repeat: no-repeat;
-			position: center;
-		}
-		@include single-transition(background-color, 0.5s, ease-out);
-		&:hover{
-			@include transition-property(background-color);
-			@include transition-duration(0.5s);
-			@include transition-timing-function(ease-out);
-			background-color: #ccc;
-			@include opacity(0.9);
-		}
-		@include single-box-shadow(#888, 0, 2px, 5px, -2px, false);
+	h2{
+		//CRIAR COMPATIBILIDADE COM O IE!!!!
+		background: inline-image("../img/estilo/linha-preta.png", 'image/png'), inline-image("../img/estilo/fotografia.png", 'image/png') no-repeat 10px, inline-image("../img/estilo/curso.png", 'image/png') no-repeat right;
+		//background: url("../img/estilo/linha-preta.png"), url("../img/estilo/fotografia.png", 'image/png') no-repeat 10px;
+		height:190px;
+		text-align:right;
+		padding: auto 20px;
+		font-size: 0px;
 	}
-}
-/*author.jpg = id do item da lista*/
-@each $author in $lista{
-    ##{$author}{
-	background: url("../trabalhos/Menu/#{$author}.jpg");
+	h3{
+		text-align:right;
+		padding: 0 20px;
 	}
 }
 
+section{
+	height: 400px;
+	width: auto;
+	#trabalhos{
+	ul{
+		li{
+			vertical-align: middle;
+			margin: 0px 10px;
+			padding: 10px;
+			display: block;
+			float: left;
+			border: 1px solid #BBBBBB;
+			background: {
+				color: white;
+				repeat: no-repeat;
+				position: center;
+			}
+			a{
+				display:block;
+				height:55px;
+				overflow: hidden;
+				padding-top:400px;
+				color: black;
+				text-decoration: none;
+				@include single-transition(padding, 0.5s, ease-out);
+				&:hover{
+					padding-top:315px;
+					@include single-transition(padding, 0.5s, ease-out);
+				}
+			}
+			}
+		}
+	}
+}
+.nome, .sobrenome{
+
+}
+.nome{
+	font-weight: bold;
+}
+.titulo{
+	display:block;
+	border-top: 3px solid black;
+}
+.clearfix {
+	float: none;
+	clear: both;
+}
+@each $author in $lista{
+    ##{nth($author, 1)}{
+	background: url("../img/trabalhos/menu/#{nth($author, 1)}.jpg");
+	width:#{nth($author, 2)}px;
+	height:#{nth($author, 3)}px;
+/*	a{
+			height:#{nth($author, 3)}px;
+	}
+*/
+	}
+}
+
+#next, #prev{
+	cursor: pointer;
+	position: absolute;
+	top: 420px;
+}
+#next{
+	right: 30px;
+}
+#prev{
+	left: 30px;
+}
 footer{
-	background:gray;
-	display: block;
-	@include single-box-shadow(#888, 0px, -2px, 5px, -2px, false);
-	padding-top: 20px;
-	padding-right: 20px;
-	text-align: right;
-	background-image: url("../trabalhos/Menu/b.jpg");
+	text-align:right;
+	margin-top: 10px;
+	padding: 10px 20px;
+	border-top: 7px solid black;
 }
