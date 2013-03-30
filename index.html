@@ -12,6 +12,7 @@
 	
 	<!-- Scripts -->
 	<script type="text/javascript" language="javascript" src="js/jquery-1.8.2.min.js"></script>
+	<script src='js/modernizr.js'></script>
 	
 	<!-- Carroucel -->
 	<!-- include jQuery + carouFredSel plugin -->
@@ -22,6 +23,7 @@
 		<script type="text/javascript" language="javascript" src="js/helper-plugins/jquery.transit.min.js"></script>
 		<script type="text/javascript" language="javascript" src="js/helper-plugins/jquery.ba-throttle-debounce.min.js"></script>
 		
+	
 	<script src="js/base.js" type="text/javascript"></script>
 	
 	<!-- add suport for HTML5 in Internet Explorer -->
@@ -51,19 +53,20 @@
 		</hgroup>
 		<nav id="menu_revista">
 		<ul>
-			<li><a href="#exposicao">Exposição</a></li>
-			<li><a href="#editorial">Editorial</li>
-			<li><a href="#expediente">Expediente</a></li>
+			<li id="a-exposição"><a href="#exposicao">Exposição</a></li>
+			<li id="a-editorial"><a href="#editorial">Editorial</li>
+			<li id="a-expediente"><a href="#expediente">Expediente</a></li>
+			<li id="a-studium"><a href="#studium">+ Studium</a></li>
 		</ul>
 		</nav>
 	</header>
-	<section>
+	<section id="exposicao">
 		<nav id="trabalhos">
 		<ul>
 			<li id="samuca"><a href="#"><span class="titulo">Anelinda </span><span class="nome">Samuel</span><span class="sobrenome"> Mariani,</span><span class="nome"> Camila</span><span class="sobrenome"> Kater</span> e<span class="nome"> Marina</span><span class="sobrenome"> Pires</span></a></li>
 			<li id="lu"><a href="#"><span class="titulo">Do que nunca termina </span><span class="nome">Luciana</span><span class="sobrenome"> Fávero</span></a></li>
 			<li id="nat"><a href="#"><span class="titulo">Ensaio sobre a Catedral </span><span class="nome">Natalia</span><span class="sobrenome"> Pelizari</span></a></li>
-			<li id="jean"><a href="#"><span class="titulo">Espaços de um futuro que não existiu </span><span class="nome">Jean Marcel</span><span class="sobrenome"> Camargo</a></li>
+			<li id="jean"><a href="#jean"><span class="titulo">Espaços de um futuro que não existiu </span><span class="nome">Jean Marcel</span><span class="sobrenome"> Camargo</a></li>
 			<li id="bia"><a href="#"><span class="titulo">Individuação </span><span class="nome">Beatriz</span><span class="sobrenome"> Iozzi</span></a></li>
 			<li id="myho"><a href="#"><span class="titulo">ParaLino </span><span class="nome">Vanessa</span><span class="sobrenome"> Myho</span></a></li>
 			<li id="lud"><a href="#"><span class="titulo">Sequencia1 e Sequencia2</span><span class="nome">Luiza</span><span class="sobrenome"> Folegatti</span></a></li>
@@ -74,27 +77,46 @@
 		<div class="clearfix"></div>
 		</nav>
 	</section>
-	<section id="exposicao">
-		Teste
-	</section>
 	<section id="editorial">
-	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempus malesuada varius. Nunc tortor est, viverra in porttitor at, eleifend vitae elit. Sed gravida enim non mi vestibulum sit amet rutrum sapien pellentesque. Fusce imperdiet magna in sem scelerisque in luctus lorem gravida. Cras nec dapibus nisi. Sed neque felis, sodales id porta in, lacinia et justo. Nulla tempor dolor id nisl pretium elementum. Etiam rutrum, nisi at tempor volutpat, arcu magna facilisis leo, sed facilisis sapien elit nec nisl.
-
-	Phasellus scelerisque sapien vel lacus pharetra non aliquam augue luctus. Ut in mi ut orci accumsan adipiscing. In diam ligula, malesuada in malesuada id, pellentesque at augue. Sed eu vehicula metus. Cras volutpat vulputate sollicitudin. Suspendisse potenti. Aliquam aliquam rutrum urna non aliquam. Pellentesque justo ante, molestie vel dignissim a, mattis et nisl. Nam pulvinar odio nec tellus lacinia pretium. Etiam eu dui eu lectus eleifend facilisis. Aenean eu dolor ipsum. Maecenas justo erat, bibendum id blandit vitae, consectetur non velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis luctus lacus sed felis dignissim eu commodo sem lobortis. Phasellus at lacus mauris.
-
-	Morbi ut risus risus. Pellentesque condimentum consequat elit. Curabitur quis scelerisque est. Phasellus facilisis ligula porta justo suscipit eu fringilla tortor iaculis. Donec in ipsum eget lectus egestas accumsan. In non turpis rutrum diam tristique molestie quis ullamcorper dolor. Maecenas tempor dolor vitae nisl interdum tempus. In ullamcorper neque laoreet felis lacinia aliquam. Integer diam ligula, laoreet vel ultrices et, iaculis et ligula. Donec rhoncus ligula ut nisi vehicula sit amet aliquet ante tristique. Etiam non nulla ligula, et auctor tortor.
-
-	Etiam a erat semper sapien consectetur consequat. Sed sit amet nulla ut nisi tempor semper. Donec eu tortor eget felis dictum porttitor. Quisque sit amet porta risus. Integer ligula ligula, porta non feugiat vitae, faucibus ut risus. Cras non nisl leo. Etiam vitae velit quis quam porttitor pulvinar. Nam consectetur pellentesque leo, sed imperdiet felis tincidunt vitae. Nam leo massa, euismod eu semper vitae, luctus vel erat. Ut nec lectus odio. Mauris tortor nulla, fermentum non viverra sed, molestie in felis. Suspendisse potenti.
-
-	Quisque et turpis justo, in tincidunt felis. Nulla ut nibh eget ipsum commodo accumsan. Integer tempus nisi lacinia purus congue interdum id nec mauris. Maecenas nec mi sem, eget congue arcu. Vestibulum lectus nisl, mattis at mattis quis, vestibulum eu nibh. Nulla et magna nisl, sit amet aliquam ligula. Donec eget posuere odio. Duis et ipsum quam. Etiam feugiat faucibus ornare. Phasellus et ante et elit tempus interdum. Nam enim mi, consectetur et facilisis eget, congue id diam. 
+		<h3>Editorial</h3>
+		<p>Fotografar hoje em dia é uma atividade e uma ação cultural impregnada e contaminada em todos os setores da vida contemporânea. Nunca como antes se fotografou tão intensamente e nunca como antes não se imprimiu fotografias. De um estado sólido e concreto, a fotografia tornou-se líquida e em fluxo dinâmico de tela a tela. O ato fotográfico tornou-se um gesto comum e banal, em qualquer lugar e evento.</p>
+		<p>As pessoas querem guardar muito mais imagens de uma experiência do que a própria lembrança da experiência em si mesma. A fotografia tornou-se um biombo entre pessoas e a realidade vivida, ou de forma mais otimista, podemos pensar que a experiência fotográfica faz hoje parte da experiência de vida com tentativas quase simultâneas de compartilhamento de afetos.</p>
+		<p>Nesse sentido, a experiência estética fotográfica também está mais próxima de todos, com disponibilidade no uso de inúmeros filtros, programas amigáveis de tratamento de imagens, e mesmo programas sofisticados implantados nas próprias câmeras fotográficas, nas múltiplas formas que se apresenta, dos celulares ao tablet. Todos podem realizar o que durante muito tempo chamou-se de “fotografia artística”.</p>
+		<p>Cabe àqueles que se lançam no enfrentamento e no embate com propostas tecnológicas prontas no cardápio fastfood da imagem  técnica na sociedade contemporânea - e fáceis de serem utilizadas, buscarem lugares de inquietação, condução para a estranheza e pulsões para o sublime.</p>
+		<p>A procura muitas vezes supera o produto final; o processo criativo como autoconhecimento pode ser mais importantes do que a obra, pois essa se desgarra e tem vida própria e lança-se nas águas que não retornam. Os ensaios dessa exposição permeiam a fronteira do vivido e do estético; são experiências imagéticas sensíveis no encontro com o outro.</p>
+		<p>Fernando de Tacca</p>
+		<p>Fotógrafo, professor Livre Docente no Departamento de Multimeios, Mídia & Comunicação do Instituto de Artes da Unicamp e editor da revista Studium.</p>
 	</section>
-	<section id="expediente">
+	<section id="studium">
+		<h3>+Studium</h3>
+		<h4>Expediente</h4>
+		<p>Projetos Especiais Studium - Fotografia em curso</p>
+		<dl>
+		<dt>Coordenação Editorial</dt>
+			<dd>Fernando de Tacca</dd>
+		<dt>Consultoria e suporte técnico:</dt>
+			<dd>Lygia Nery</dd>
+		<dt>Implementação e web design:</dt>
+			<dd>Jean Marcel Camargo</dd>
+		<dt>Design:</dt>
+			<dd>Marcus Braga</dd>
+		<dt>Fotógrafos:</dt>
+			<dd>Jean Marcel Camargo / Lud / Isa</dd>
+		</dl> 
+		<h4><a href="http://www.studium.iar.unicamp.br/capas.htm">Outras edições, indices e busca</a></h4>
+		<h4><a href="http://www.studium.iar.unicamp.br/biblio/suporte.html">Suporte</a></h4>
 	</section>
 	<footer>
 		<h4>ISSN 1519-4388</h4>
 		<h4>Apoios</h4>
-		<p><img src="img/apoios/ia.jpg"><img src="img/apoios/unicamp.jpg"></p>
-		<p>Copyleft</p>
+		<p>
+			<img src="img/apoios/bagda.jpg" alt="Bagda café" title="Bagda café">
+			<a href="http://www.miscampinas.com.br/"><img src="img/apoios/mis.jpg" alt="Museu da Imagem e Som de Campinas" title="Museu da Imagem e Som de Campinas"></a>
+			<a href="http://www.visarteprodutorajr.com.br/"><img src="img/apoios/visarte.jpg" alt="Produtora Jr. do Instituto de Artes da Unicamp" title="Produtora Jr. do Instituto de Artes da Unicamp"></a>
+			<a href="http://www.iar.unicamp.br/"><img src="img/apoios/ia.jpg" alt="Instituto de Artes da Unicamp" title="Instituto de Artes da Unicamp"></a>
+			<a href="http://www.unicamp.br/"><img src="img/apoios/unicamp.jpg" alt="Unicamp" title="Unicamp"></a>
+		</p>
+		<p class="licence">licensed under: <a href="http://creativecommons.org/licenses/by-nc/3.0/"><img src="img/estilo/by-nc.png" alt="Creative Commons - BY/CC 3.0" title="Creative Commons - BY/CC 3.0"></a> - 2013</p>
 	</footer>
 </div>
 </body>

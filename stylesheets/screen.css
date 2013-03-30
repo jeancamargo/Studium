@@ -76,7 +76,7 @@ header {
 header h1 {
   background-color: #fff;
   border-bottom: 1px solid #bbbbbb;
-  padding: 5px 20px;
+  padding: 5px 20px 10px 20px;
 }
 /* line 17, ../sass/screen.scss */
 header nav {
@@ -294,9 +294,72 @@ section #trabalhos ul li a:hover {
 }
 
 /* line 119, ../sass/screen.scss */
+#editorial {
+  width: 40%;
+}
+/* line 121, ../sass/screen.scss */
+#editorial h3 {
+  font-size: 18pt;
+  border-bottom: 3px solid black;
+  margin-bottom: 5px;
+}
+
+/* line 127, ../sass/screen.scss */
+#studium {
+  padding: 0px 200px 30px 200px;
+}
+/* line 129, ../sass/screen.scss */
+#studium h3 {
+  font-size: 18pt;
+  border-bottom: 3px solid black;
+  margin-bottom: 5px;
+}
+/* line 134, ../sass/screen.scss */
+#studium h4 {
+  font-size: 16pt;
+  padding-top: 10px;
+}
+/* line 137, ../sass/screen.scss */
+#studium h4:last-child {
+  border-bottom: 3px solid black;
+  padding-bottom: 10px;
+}
+/* line 142, ../sass/screen.scss */
+#studium dd, #studium dt, #studium p {
+  margin-left: 15px;
+}
+/* line 145, ../sass/screen.scss */
+#studium dt, #studium p {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* line 150, ../sass/screen.scss */
 footer {
   text-align: right;
   margin-top: 10px;
   padding: 10px 20px;
   border-top: 7px solid black;
+}
+/* line 155, ../sass/screen.scss */
+footer h4 {
+  margin-bottom: 10px;
+}
+/* line 158, ../sass/screen.scss */
+footer a {
+  margin-left: 10px;
+}
+/* line 161, ../sass/screen.scss */
+footer .licence {
+  border-top: 2px solid black;
+  margin-top: 10px;
+  padding-top: 5px;
+}
+/* line 165, ../sass/screen.scss */
+footer .licence a {
+  margin-left: 0;
+}
+/* line 167, ../sass/screen.scss */
+footer .licence a img {
+  vertical-align: top;
 }

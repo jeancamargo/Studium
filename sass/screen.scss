@@ -12,7 +12,7 @@ header{
 	h1{
 		background-color:#fff;
 		border-bottom: 1px solid #BBBBBB;
-		padding: 5px 20px;
+		padding: 5px 20px 10px 20px;
 	}
 	nav{
 		position: absolute;
@@ -116,9 +116,57 @@ section{
 #prev{
 	left: 30px;
 }
+#editorial{
+	width: 40%;
+	h3{
+	font-size: 18pt;
+	border-bottom: 3px solid black;
+	margin-bottom:5px;
+	}
+}
+#studium{
+	padding: 0px 200px 30px 200px;
+	h3{
+		font-size: 18pt;
+		border-bottom: 3px solid black;
+		margin-bottom:5px;
+	}
+	h4{
+		font-size: 16pt;
+		padding-top:10px;
+		&:last-child{
+			border-bottom: 3px solid black;
+			padding-bottom: 10px;
+		}
+	}
+	dd, dt, p{
+		margin-left: 15px;
+	}
+	dt, p{
+		font-weight: bold;
+		margin-top:10px;
+	}
+}
 footer{
 	text-align:right;
 	margin-top: 10px;
 	padding: 10px 20px;
 	border-top: 7px solid black;
+	h4{
+		margin-bottom: 10px;
+	}
+	a{
+		margin-left: 10px;
+	}
+	.licence{
+		border-top: 2px solid black;
+		margin-top: 10px;
+		padding-top: 5px;
+			a{
+				margin-left: 0;
+				img{
+				vertical-align:top;
+				}
+			}
+	}
 }
