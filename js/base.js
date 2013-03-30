@@ -58,7 +58,7 @@ $(window).bind('hashchange', function() {
 $(document).ready(function() {
 clearPage();
 var _href = window.location.hash;
-alert(_href);
+//alert(_href);
 mudapagina(_href);
 carroceu("#trabalhos");
 if (Modernizr.history) {
