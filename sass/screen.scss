@@ -2,6 +2,7 @@
 @import "compass/css3";
 
 @import "partials/_base";
+
 body{
 	font-family: 'Dosis', sans-serif;
 }
@@ -44,8 +45,32 @@ header{
 		padding: 0 20px;
 	}
 }
-
-section{
+footer{
+	clear:both;
+	text-align:right;
+	margin-top: 10px;
+	padding: 10px 20px;
+	border-top: 7px solid black;
+	h4{
+		margin-bottom: 10px;
+	}
+	a{
+		margin-left: 10px;
+	}
+	.licence{
+		border-top: 2px solid black;
+		margin-top: 10px;
+		padding-top: 5px;
+			a{
+				margin-left: 0;
+				img{
+				vertical-align:top;
+				}
+			}
+	}
+}
+/*INDEX*/
+#exposicao{
 	height: 400px;
 	width: auto;
 	#trabalhos{
@@ -79,6 +104,73 @@ section{
 		}
 	}
 }
+
+//listagem de id's do menu: nome_do_arquivo.jpg = id do <li> w / h
+$lista: bia 450 300, isa 450 300, jean 154 300, lu 428 300, lud 200 300, myho 375 300, nat 400 300, samuca 530 300, pri 534 300, catto 300 300;
+@each $author in $lista{
+    ##{nth($author, 1)}{
+	background: url("../img/trabalhos/menu/#{nth($author, 1)}.jpg");
+	width:#{nth($author, 2)}px;
+	height:#{nth($author, 3)}px;
+/*a{
+			height:#{nth($author, 3)}px;
+	}*/
+
+	}
+}
+
+/*MOSTRA*/
+#ensaio{
+	height: 350px;
+	width: auto;
+	ul{
+		li{
+			vertical-align: middle;
+			margin: 0px 10px;
+			padding: 10px;
+			display: block;
+			float: left;
+			border: 1px solid #BBBBBB;
+			background: {
+				color: white;
+				repeat: no-repeat;
+				position: center;
+			}
+			a{
+				display:block;
+				height:55px;
+				overflow: hidden;
+				padding-top:400px;
+				color: black;
+				text-decoration: none;
+				@include single-transition(padding, 0.5s, ease-out);
+				&:hover{
+					padding-top:315px;
+					@include single-transition(padding, 0.5s, ease-out);
+				}
+			}
+			}
+		}
+	hgroup{
+		margin-left: 20px;
+		float:left;
+		margin-bottom: 15px;
+	}
+	h3{
+		font-size: 18pt;
+	}
+	.informacoes{
+		float: right;
+		margin-right: 20px;
+		+ div{
+			display:none;
+			width:300px;
+		}
+	}
+}
+
+
+/*INDEX + MOSTRA */
 .nome, .sobrenome{
 
 }
@@ -93,18 +185,6 @@ section{
 	float: none;
 	clear: both;
 }
-@each $author in $lista{
-    ##{nth($author, 1)}{
-	background: url("../img/trabalhos/menu/#{nth($author, 1)}.jpg");
-	width:#{nth($author, 2)}px;
-	height:#{nth($author, 3)}px;
-/*	a{
-			height:#{nth($author, 3)}px;
-	}
-*/
-	}
-}
-
 #next, #prev{
 	cursor: pointer;
 	position: absolute;
@@ -116,6 +196,9 @@ section{
 #prev{
 	left: 30px;
 }
+
+// EDITORIAL
+
 #editorial{
 	width: 40%;
 	h3{
@@ -124,6 +207,8 @@ section{
 	margin-bottom:5px;
 	}
 }
+
+// + STUDIUM
 #studium{
 	padding: 0px 200px 30px 200px;
 	h3{
@@ -145,28 +230,5 @@ section{
 	dt, p{
 		font-weight: bold;
 		margin-top:10px;
-	}
-}
-footer{
-	text-align:right;
-	margin-top: 10px;
-	padding: 10px 20px;
-	border-top: 7px solid black;
-	h4{
-		margin-bottom: 10px;
-	}
-	a{
-		margin-left: 10px;
-	}
-	.licence{
-		border-top: 2px solid black;
-		margin-top: 10px;
-		padding-top: 5px;
-			a{
-				margin-left: 0;
-				img{
-				vertical-align:top;
-				}
-			}
 	}
 }

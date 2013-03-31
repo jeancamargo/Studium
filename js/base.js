@@ -1,17 +1,4 @@
-function mudapagina(z){
-	clearPage();
-	if (z==""){
-		z = "#exposicao";
-	}
-	$(z).fadeIn();
-}
-function clearPage(){
-	$("#exposicao").hide();
-	$("#editorial").hide();
-	$("#expediente").hide();
-	$("#studium").hide();
-}
-function carroceu(z){
+function carroceu(z,size){
 	/*Create navigation buttons to use with CarrouFredSel*/
 	$(z).append("<div id='prev'><img src='img/estilo/prev_button.png'></div><div id='next'><img src='img/estilo/next_button.png'>")
 	/*	CarouFredSel: a circular, responsive jQuery carousel.
@@ -21,7 +8,7 @@ function carroceu(z){
 	z = z+" ul";
 	$(z).carouFredSel({
 		width: "100%",
-		height: 400,
+		height: size,
 		items: "variable",
 		scroll: {
 			items: 1,
@@ -41,39 +28,28 @@ function carroceu(z){
 	});
 }
 
-/*
-###########################################
-Esquema pra toda vez que mudar a pagina atualizar o rolê
-###########################################
-*/
-
-$(window).bind('hashchange', function() {
-	clearPage();
-    _href = window.location.hash;
-	mudapagina(_href);
-	carroceu("#trabalhos");
-	return false
-});
-
 $(document).ready(function() {
-clearPage();
-var _href = window.location.hash;
-//alert(_href);
-mudapagina(_href);
-carroceu("#trabalhos");
-if (Modernizr.history) {
-    // history is supported; do magical things
-    // hijack the nav click event
-    $("nav").delegate("a", "click", function() {
-		_href = $(this).attr("href");
-		// change the url without a page refresh and add a history entry.
-		history.pushState(null, null, _href);
-		// load the content
-		mudapagina(_href);
-		// fear not! we're going to build this function in the next code block
-	return false
-	});
-} else {
+	$("section").hide();
+	$("section").fadeIn();
+	carroceu("#trabalhos", 400);
+	carroceu("#ensaio", 350);
 
-}
+	$(".informacoes a").fancybox({
+    openEffect  : 'none',
+    closeEffect : 'none',
+    afterLoad   : function() {
+        this.inner.prepend( '<h1>Espaços de um futuro que não existiu</h1>' );
+        this.content = '<h1>Jean Marcel Camargo</h1><br>' + this.content.html();
+    }
+	});
+
+	$(".fancybox").fancybox({
+	helpers	: {
+			title	: {
+				type: 'outside'
+			},
+			buttons	: {}
+		}
+	});
+	
 });

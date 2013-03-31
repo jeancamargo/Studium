@@ -1,0 +1,12 @@
+$lista: t1 154 300, t2 154 300, t3 154 300, t4 154 300, t5 154 300, t6 154 300, t7 154 300;
+@each $author in $lista{
+    ##{nth($author, 1)}{
+	background: url("../img/trabalhos/jean/#{nth($author, 1)}.jpg");
+	width:#{nth($author, 2)}px;
+	height:#{nth($author, 3)}px;
+/*a{
+			height:#{nth($author, 3)}px;
+	}*/
+
+	}
+}
